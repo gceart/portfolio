@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="nav-items">
+                <li class="nav--item" href="#">Home</li>
+                <li class="nav--item" href="#">About Me</li>
+                <li class="nav--item" href="#">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="intro">
+            <h1>Gastón Villalba</h1>
+            <h2>Front end begginer developer</h2>
+        </section>
+        <img class="img" src="./img/img.png" alt="">
+        <label class="dynamic-msg">Hello, I am Gastón and I like to <span id="changing-msg"></span></label>
+        <p class="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi incidunt alias odit cupiditate porro suscipit quibusdam minima earum eaque beatae, consequatur aut molestias aliquam corrupti ea deleniti iusto rerum cum?
+        </p>
+    </main>
+    <section class="mail-section">
+        <form class="mail--form" action="mailto:gastonleovillalba@gmail.com" method="post" enctype="text/plain">
+            <input class="name" type="text" name="name" placeholder="Name" required>
+            <input class="email" type="email" name="email" placeholder="e-mail" required>
+            <textarea class="msg-area" name="msg" id="" placeholder="Message" rows="6" cols="20" required></textarea>
+            <input type="submit" value="Send e-mail">
+        </form>
+    </section>
+    <footer class="footer">
+        <ul>
+            <a href="#" class="icon fab fa-github"></a>
+        </ul>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
