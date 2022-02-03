@@ -188,12 +188,17 @@ input[type=submit]:nth-child(4) {
 }
 
 #changing-msg {
-    display: block;
+    display: flex;
     width: 12ch;
-    height: 1ch;
+    height: 2.5ch;
     background-color: black;
-    animation: typing 1s steps(12) forwards
+    animation: typing 1s steps(12) forwards;
+    color: var(--color-accent);
+    overflow: hidden;
+    white-space: nowrap;
 }
+
+.deleting {animation: deleting 1s steps(12) forwards !important}
 
 @keyframes typing {
     from {width:0;} 

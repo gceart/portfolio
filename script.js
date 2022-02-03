@@ -2,7 +2,7 @@
 
 const changingMsgEl = document.getElementById("changing-msg");
 
-const phrases = ["xd", "lol", "lmao"]
+const phrases = [ "code", "resolve problems", "team work"]
 
 /* 
     select phrase
@@ -10,8 +10,20 @@ const phrases = ["xd", "lol", "lmao"]
 
 */
 
+let isTyping = changingMsgEl.getAttribute("animation") == "typing"; 
 const changeMsg = (msg) => {
-    changingMsgEl.style.backgroundColor = '#500'
+    changingMsgEl.textContent = msg;
+    changingMsgEl.style.width = `${msg.length}ch`
+    let chooseAnim = isTyping? "typing" : "deleting";
+    changingMsgEl.style.animation = `${chooseAnim} 1s steps(${msg.length}) forwards`
+
+    setTimeout(()=>{
+        isTyping = !isTyping;
+    },1000)
 }
 
-changeMsg();
+setInterval(()=>{
+    changeMsg(phrases[2])
+}, 2000)
+
+
