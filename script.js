@@ -11,5 +11,7 @@ const phrases = ["xd", "lol", "lmao"]
 */
 
 const changeMsg = (msg) => {
-    changingMsgEl.style. kkkk
+    changingMsgEl.style.backgroundColor = '#500'
 }
+
+changeMsg();
