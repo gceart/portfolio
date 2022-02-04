@@ -75,6 +75,7 @@ html {
 .intro h1{
     color: var(--color-accent);
     font-size: var(--font-h1);
+    padding-top: .6em;
 }
 
 .intro h2 {
@@ -243,8 +244,8 @@ input[type=submit]:nth-child(4) {
 @media (min-width: 800px) {
 
     :root {
-        --font-h1: 1.3em;
-        --font-h2: .6em;
+        --font-h1: 2.3em;
+        --font-h2: .8em;
         --font-info: .8em;
     }
 
@@ -253,7 +254,6 @@ input[type=submit]:nth-child(4) {
     }
 
     .img {
-        opacity: 0.1;
         position: relative;
     }
 
@@ -285,7 +285,6 @@ input[type=submit]:nth-child(4) {
     border-right: 1px solid var(--color-light);
 }
 
-
 @keyframes typing {
     from {width:0;} 
 }
@@ -297,6 +296,7 @@ input[type=submit]:nth-child(4) {
 @keyframes blink {
     50% {border-color: transparent} 
 }
+
 a {
     text-decoration: none;
     color: inherit;
