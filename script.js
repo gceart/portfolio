@@ -53,14 +53,15 @@ change msg
 anim typing 1s ...
 */
 
+const cardFlipper = document.querySelector(".color-flipper");
 
-
-
-const imgFlipper = document.getElementById("img-flipper");
-
-imgFlipper.addEventListener("mouseover", ()=>{
-document.querySelector(".color-flipper > p").style.display = 'block'
+cardFlipper.addEventListener("mouseenter", (e)=>{
+document.querySelector(".color-flipper > .card--info").style.display = 'block'
+document.getElementById("img-flipper").style.opacity = ".05"
 })
-imgFlipper.addEventListener("mouseover", ()=>{
-document.querySelector(".color-flipper > p").style.display = 'block'
+
+cardFlipper.addEventListener("mouseleave", (e)=>{
+document.querySelector(".color-flipper > .card--info").style.display = 'none'
+e.target.style.backgroundColor = "transparent"
+document.getElementById("img-flipper").style.opacity = "1"
 })

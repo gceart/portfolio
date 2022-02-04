@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -97,6 +97,7 @@ html {
     display: block;
     color: var(--color-light);
     font-size: var(--font-medium);
+    user-select: none;
 }
 
 .info {
@@ -106,50 +107,71 @@ html {
     color: var(--color-light)
 }
 
-
 .projects {
     color: var(--color-accent);
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: var(--color-primary);
+    padding-top: 1.2em;
 }
 
-.projects h3 {
-    font-size: var(--font-medium);
+.cards-container {
+    display: flex;
     padding: 2em;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .projects--card {
-    width: 100%;
-    height: fit-content;
+    margin: auto;
+    max-width: 200px;
+    height: 100%;
     text-align: center;
+    padding: .5em;
+    position: relative;
+    transition: .25s;
 }
 
-.projects--card h4 {
-    position: absolute;
-    background-color: var(--color-dark);
-    left: 50%;
-    transform: translatex(-50%);
-    margin: auto;
-}
-.projects--card p {
-    max-width: 100px;
+.card--info {
+    color: var(--color-accent);
+    width: 100%;
+    height: 100%;
     position: absolute;
     left: 50%;
-    transform: translateX(50%);
+    transform: translateX(-50%);
     display: none;
 }
 
-.projects--card img{
-    width: auto;
-    max-height: 400px;
-    object-fit: contain;
-    object-position: top;
-    filter: grayscale(.8);
-    opacity: .4;
+.card--title {
+    font-size: var(--font-medium);
+    position: relative;
+    top: 10%;
+    padding-bottom: .5em;
+}
+.card--description {
+    text-align: justify;
+    padding: 0 30px ;
+    position: relative;
+    top: 20%;
 }
 
+.projects--card img{
+    width: 100%; 
+    height: calc(100% - 30px);
+    object-fit: contain;
+    object-position: top;
+    border-radius: 16px;
+    transition: .25s;
+}
+
+.projects--card:hover{
+    transform: scale(1.1);
+    transition: .25s;
+    cursor:pointer;
+}
+
+.card-hover{background-color: red;}
 
 /* start mail section */
 
@@ -159,6 +181,7 @@ html {
     position: relative;
     flex-direction: column;
     position:relative;
+    background-color: var(--color-primary);
 }
 
 .mail--form {
