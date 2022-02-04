@@ -36,7 +36,7 @@ resolveAfterSeconds(changeMsg, 3000)
 setInterval(() => {
     resolveAfterSeconds(changeAnim, 0)
     resolveAfterSeconds(changeAnim, 2000)
-    resolveAfterSeconds(changeMsg, 3000)
+    resolveAfterSeconds(changeMsg, 3500)
 }, 4000);
 
 /* ### END JS dynamic msg ###*/

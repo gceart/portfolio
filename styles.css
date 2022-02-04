@@ -259,12 +259,12 @@ input[type=submit]:nth-child(4) {
 
     .intro {
         position: relative;
-        padding: 2em;
+        padding: 1.5em;
     } 
 
     .info {
         position: relative;
-        padding: 2em;
+        padding: 1em;
     }
     
 }
