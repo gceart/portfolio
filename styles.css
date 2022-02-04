@@ -24,6 +24,7 @@ html {
     width: fit-content;
     background-color: var(--color-dark);
     margin: auto;
+    overflow: none;
 }
 
 .nav {
@@ -81,6 +82,10 @@ html {
     background-color: #222;
     border-radius: 100%;
     color: transparent;
+}
+
+.dynamic-msg {
+    display: block;
 }
 
 .info {
@@ -159,28 +164,24 @@ input[type=submit]:nth-child(4) {
     }
 
     .main-container {
-        display: grid;
-        grid-template-columns: 400px, 800px;
-        grid-template-rows: min-content 400px;
-        grid-template-areas: 
-            '. intro'
-            'img info'
+        display: flex;
     }
 
     .img {
         opacity: 0.1;
-        grid-area: img;
         position: relative;
-        top: -10%;
     }
 
     .intro {
-        grid-area: intro;
         position: relative;
+        padding: 2em;
     } 
 
+    .dynamic-msg {
+        color: var(--color-light);
+    }
+
     .info {
-        grid-area: info;
         position: relative;
         padding: 2em;
     }
@@ -188,17 +189,18 @@ input[type=submit]:nth-child(4) {
 }
 
 #changing-msg {
-    display: flex;
-    width: 12ch;
+    display: block;
     height: 2.5ch;
-    background-color: black;
-    animation: typing 1s steps(12) forwards;
+    width: 17ch;
+    animation: typing 1s steps(17) forwards;
     color: var(--color-accent);
     overflow: hidden;
     white-space: nowrap;
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
 
-.deleting {animation: deleting 1s steps(12) forwards !important}
 
 @keyframes typing {
     from {width:0;} 
