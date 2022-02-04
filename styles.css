@@ -21,6 +21,7 @@
     --font-h1: 2em;
     --font-h2: .9em;
     --font-info: 1em;
+    --font-medium: 1.4em;
 }
 
 html {
@@ -80,6 +81,7 @@ html {
     color: var(--color-light);
     font-size: var(--font-h2);
     margin: .5em;
+    margin-bottom: 2em;
 }
 
 .img {
@@ -94,6 +96,7 @@ html {
 .dynamic-msg {
     display: block;
     color: var(--color-light);
+    font-size: var(--font-medium);
 }
 
 .info {
@@ -102,6 +105,53 @@ html {
     text-align: center;
     color: var(--color-light)
 }
+
+
+.projects {
+    color: var(--color-accent);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects h3 {
+    font-size: var(--font-medium);
+    padding: 2em;
+}
+
+.projects--card {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.projects--card h4 {
+    position: absolute;
+    background-color: var(--color-dark);
+    left: 50%;
+    transform: translatex(-50%);
+    margin: auto;
+}
+.projects--card p {
+    max-width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(50%);
+    display: none;
+}
+
+.projects--card img{
+    width: auto;
+    max-height: 400px;
+    object-fit: contain;
+    object-position: top;
+    filter: grayscale(.8);
+    opacity: .4;
+}
+
+
+/* start mail section */
 
 .mail-section {
     padding: 2em;
@@ -137,11 +187,15 @@ html {
 .msg-area {resize: none;}
 
 input[type=submit]:nth-child(4) {
-    border: 3px solid var(--color-accent);
+    border: 2px solid var(--color-light);
+    align-self: flex-end;
+    width: fit-content;
     border-radius: 50px;
     color: var(--color-light);
-    background: var(--color-dark);
+    cursor:pointer;
 }
+
+/* end mail section */
 
 .footer {
     width: 100%;

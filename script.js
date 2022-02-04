@@ -52,3 +52,15 @@ anim deleting 1s
 change msg
 anim typing 1s ...
 */
+
+
+
+
+const imgFlipper = document.getElementById("img-flipper");
+
+imgFlipper.addEventListener("mouseover", ()=>{
+document.querySelector(".color-flipper > p").style.display = 'block'
+})
+imgFlipper.addEventListener("mouseover", ()=>{
+document.querySelector(".color-flipper > p").style.display = 'block'
+})
