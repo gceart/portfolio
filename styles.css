@@ -141,85 +141,60 @@ html {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    opacity: 0;
+    z-index: 50;
 }
 
 .card--title {
     font-size: var(--font-medium);
     position: relative;
-    top: 10%;
+    top: 8%;
     padding-bottom: .5em;
 }
+
 .card--description {
     text-align: justify;
     padding: 0 30px ;
     position: relative;
-    top: 20%;
+    top: 15%;
 }
 
-.projects--card img{
+.projects--card img {
     width: 100%; 
     height: calc(100% - 30px);
     object-fit: contain;
     object-position: top;
     border-radius: 16px;
     transition: .25s;
+    z-index: 10;
 }
 
-.projects--card:hover{
+.btn {
+    position:relative;
+    top:30%;
+    border:none;
+    border-radius: 100%;
+    padding: .5em; 
+    margin: 1em;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    background-color: transparent;
+    transition: .25s;
+}
+
+.btn:hover {
+    cursor:pointer;
     transform: scale(1.1);
     transition: .25s;
-    cursor:pointer;
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
 }
 
-.card-hover{background-color: red;}
-
-/* start mail section */
-
-.mail-section {
-    padding: 2em;
-    width: 100%;
-    position: relative;
-    flex-direction: column;
-    position:relative;
-    background-color: var(--color-primary);
+.projects--card:hover {
+    transform: scale(1.1);
+    transition: .25s;
 }
-
-.mail--form {
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
-    max-width: 800px;
-    margin: auto;
-}
-
-.mail--form input, .mail--form textarea{
-    padding: .6em 1em;
-    border: none;
-    border-bottom: 1px solid var(--color-light);
-    background-color: inherit;
-    font-weight: 600;
-    color: var(--color-light);
-    margin-bottom: 1em;
-}
-
-.mail--form > *::placeholder {
-    color: var(--color-light);
-    opacity: .5;
-}
-
-.msg-area {resize: none;}
-
-input[type=submit]:nth-child(4) {
-    border: 2px solid var(--color-light);
-    align-self: flex-end;
-    width: fit-content;
-    border-radius: 50px;
-    color: var(--color-light);
-    cursor:pointer;
-}
-
-/* end mail section */
 
 .footer {
     width: 100%;
@@ -300,4 +275,8 @@ input[type=submit]:nth-child(4) {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:active {
+    filter: brightness(.5);
 }

@@ -44,12 +44,12 @@ setInterval(() => {
 const cardFlipper = document.querySelector(".color-flipper");
 
 cardFlipper.addEventListener("mouseenter", (e)=>{
-    document.querySelector(".color-flipper > .card--info").style.display = 'block'
+    document.querySelector(".color-flipper > .card--info").style.opacity= '1'
     document.getElementById("img-flipper").style.opacity = ".05"
 })
 
 cardFlipper.addEventListener("mouseleave", (e)=>{
-    document.querySelector(".color-flipper > .card--info").style.display = 'none'
+    document.querySelector(".color-flipper > .card--info").style.opacity= '0'
     e.target.style.backgroundColor = "transparent"
     document.getElementById("img-flipper").style.opacity = "1"
 })
