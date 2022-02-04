@@ -6,11 +6,18 @@
 }
 
 :root {
+    /*
     --color-dark : #03045e;
     --color-primary : #0077b6;
     --color-secondary : #00b4d8;
     --color-accent : #90e0ef;
     --color-light : #caf0f8;
+    */
+    --color-dark : #30323D;
+    --color-primary : #4D5061;
+    --color-secondary : #5C80BC;
+    --color-accent : #E8C547;
+    --color-light : #CDD1C4;
     --font-h1: 2em;
     --font-h2: .9em;
     --font-info: 1em;
@@ -31,7 +38,8 @@ html {
     min-width: max-content;
     width: 100%;
     background-color: var(--color-dark) ;
-    color: var(--color-light)
+    color: var(--color-light);
+    border-bottom: 3px solid var(--color-accent);
 }
 
 .nav-items {
@@ -56,7 +64,6 @@ html {
 }
 
 .main-container {
-    background-color: var(--color-primary);
     padding: 2em;
     min-width: 300px;
     max-width: 1000px;
@@ -86,6 +93,7 @@ html {
 
 .dynamic-msg {
     display: block;
+    color: var(--color-light);
 }
 
 .info {
@@ -96,7 +104,6 @@ html {
 }
 
 .mail-section {
-    background-color: var(--color-secondary);
     padding: 2em;
     width: 100%;
     position: relative;
@@ -129,7 +136,7 @@ html {
 .msg-area {resize: none;}
 
 input[type=submit]:nth-child(4) {
-    border: 1px solid var(--color-dark);
+    border: 3px solid var(--color-accent);
     border-radius: 50px;
     color: var(--color-light);
     background: var(--color-dark);
@@ -146,7 +153,7 @@ input[type=submit]:nth-child(4) {
     text-decoration: none;
     font-size: 1.5em;
     padding: .4em;
-    color: var(--color-light);
+    color: var(--color-accent);
     transition: transform .15s;
 }
 
@@ -176,10 +183,6 @@ input[type=submit]:nth-child(4) {
         position: relative;
         padding: 2em;
     } 
-
-    .dynamic-msg {
-        color: var(--color-light);
-    }
 
     .info {
         position: relative;
