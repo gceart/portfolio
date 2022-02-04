@@ -17,7 +17,7 @@ let msg = changingMsgEl.textContent;
 const changeAnim = () => {
     let chooseAnim = isTyping? "typing" : "deleting";
     isTyping = !isTyping
-    changingMsgEl.style.animation = `${chooseAnim} 1s steps(${msg.length}) forwards`
+    changingMsgEl.style.animation = `${chooseAnim} 1s steps(${msg.length}) forwards, blink .5s infinite step-end alternate`
 }
 
 function resolveAfterSeconds(funct,x) {
