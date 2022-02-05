@@ -54,20 +54,24 @@ cardFlipper.addEventListener("mouseleave", (e)=>{
     document.getElementById("img-flipper").style.opacity = "1"
 })
 
-let lightTheme = true;
+const btnTheme = document.getElementById("btn-theme");
+let canLightTheme = true;
+btnTheme.addEventListener('click',changeMode)
+
 function changeMode() {
-    console.log(lightTheme)
-    if (lightTheme){
+    if (canLightTheme){
         document.documentElement.style.setProperty('--color-accent', '#30323d');
         document.documentElement.style.setProperty('--color-dark', '#e8c547');
         document.documentElement.style.setProperty('--color-light', '#4d5061');
         document.documentElement.style.setProperty('--color-primary', '#5c80bc');
-        lightTheme = false;
+        canLightTheme = false;
+        document.querySelector("#btn-theme > i").classList.replace("fa-moon","fa-sun")
     } else {
         document.documentElement.style.setProperty('--color-accent', '#e8c547');
         document.documentElement.style.setProperty('--color-dark', '#30323d');
         document.documentElement.style.setProperty('--color-light', '#cdd1c4');
         document.documentElement.style.setProperty('--color-primary', '#4d5061');
-        lightTheme = true;
+        canLightTheme = true;
+        document.querySelector("#btn-theme > i").classList.replace("fa-sun","fa-moon")
     }
 }
