@@ -1,7 +1,7 @@
 "use strict";
 /* ### JS dynamic msg ###*/
 const changingMsgEl = document.getElementById("changing-msg");
-const phrases = [ "code", "resolve problems", "team work"]
+const phrases = [ "code", "resolve problems", "learn"]
 let isTyping = changingMsgEl.getAttribute("animation") == "typing"; 
 let indexMsg = 0;
 let msg = changingMsgEl.textContent;

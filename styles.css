@@ -28,6 +28,7 @@
 html {
     background-color: var(--color-dark);
     margin: auto;
+    font-weight: 600;
     overflow: none;
 }
 
@@ -35,7 +36,7 @@ html {
     min-width: max-content;
     width: 100%;
     background-color: var(--color-dark) ;
-    color: var(--color-light);
+    color: var(--color-accent);
     justify-self: center;
     margin-left: 5em;
 }
@@ -44,7 +45,6 @@ html {
     padding: 1em 2em;
     list-style: none;
     text-align: center;
-    overflow: auto;
 }
 
 .nav--item {
