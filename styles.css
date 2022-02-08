@@ -38,7 +38,6 @@ html {
     background-color: var(--color-dark) ;
     color: var(--color-accent);
     justify-self: center;
-    margin-left: 5em;
 }
 
 .nav-items {
@@ -73,10 +72,18 @@ header {
 }
 
 #btn-theme {
-    position: relative;
-    justify-self: flex-end; 
+    background-color: var(--color-dark);
+    text-shadow: 2px 0px 10px var(--color-secondary);
+    color: var(--color-accent);
+    border: none;
+    position: absolute;
     font-size: 1em;
-    padding: .2em;
+    padding: .4em;
+    border-radius: 100%;
+    text-align: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .main-container {
@@ -204,8 +211,9 @@ header {
     transform: scale(1.1);
     transition: .25s;
     background-color: var(--color-accent);
-    border: 1px solid var(--color-dark);
+    border: 1px solid var(--color-accent);
     color: var(--color-dark);
+    filter: invert(1);
 }
 
 .projects--card:hover {
