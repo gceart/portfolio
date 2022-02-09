@@ -1,5 +1,5 @@
 "use strict";
-/* ### JS dynamic msg ###*/
+// START JS dynamic msg
 const changingMsgEl = document.getElementById("changing-msg");
 const phrases = [ "code", "resolve problems", "learn"]
 let isTyping = changingMsgEl.getAttribute("animation") == "typing"; 
@@ -39,27 +39,11 @@ setInterval(() => {
     resolveAfterSeconds(changeMsg, 3500)
 }, 4000);
 
-/* ### END JS dynamic msg ###*/
+// END JS dynamic msg
 
-const projectCards = document.querySelectorAll(".projects--card");
-
-projectCards.forEach( card =>{
-    card.addEventListener("mouseenter", (e)=>{
-        e.target.querySelector(".card--info").style.opacity= '1'
-        e.target.querySelector("img").style.opacity = ".05"
-    })
-
-    card.addEventListener("mouseleave", (e)=>{
-        e.target.querySelector(".card--info").style.opacity= '0'
-        e.target.style.backgroundColor = "transparent"
-        e.target.querySelector("img").style.opacity = "1"
-    })
-})
-
-
+// START BUTTON THEME 
 const btnTheme = document.getElementById("btn-theme");
 let canLightTheme = true;
-
 const changeMode = () => {
     if (canLightTheme){
         document.documentElement.style.setProperty('--color-accent', '#ffffff');
@@ -79,6 +63,72 @@ const changeMode = () => {
         document.querySelector("#btn-theme > i").classList.replace("fa-sun","fa-moon")
     }
 }
-
 btnTheme.addEventListener('click',changeMode)
+// END BUTTON THEME 
 
+const cardsContainer = document.querySelector(".cards-container");
+// START CREATE PROJECT CARD ELEMENT
+const createCard = (title, description, image, className) => {
+    const card = document.createElement("ARTICLE");
+    const cardInfo = document.createElement("DIV");
+    const cardTitle = document.createElement("H4");
+    const cardDescription = document.createElement("P");
+    const cardBtnLink = document.createElement("A");
+    const cardBtnRepo = document.createElement("A");
+    const img = document.createElement("IMG");
+
+    cardTitle.textContent = `${title}`;
+    cardDescription.textContent = `${description}`;
+
+    card.classList.add("projects--card",`${className}`);
+    cardInfo.classList.add("card--info");
+    cardTitle.classList.add("card--title");
+    cardDescription.classList.add("card--description");
+    cardBtnLink.classList.add("btn", "btn-site", "fas", "fa-external-link-alt");
+    cardBtnRepo.classList.add("btn", "btn-repo", "fab", "fa-github");
+    img.classList.add("img");
+    img.setAttribute("src",`${image}`);
+    img.setAttribute("alt",`${title}`);
+
+    cardInfo.appendChild(cardTitle);
+    cardInfo.appendChild(cardDescription);
+    cardInfo.appendChild(cardBtnLink);
+    cardInfo.appendChild(cardBtnRepo);
+    card.appendChild(cardInfo);
+    card.appendChild(img);
+    return card;
+}
+// END CREATE PROJECT CARD ELEMENT
+
+const requestData = async () => {
+    const req = await fetch("data");
+    const data = await req.json();
+    const docFragment = new DocumentFragment;
+    for(let i = 0; i < data.projects.length; i++){
+        const newCard = createCard(data.projects[i].name, data.projects[i].description, data.projects[i].image, data.projects[i].class);
+        docFragment.appendChild(newCard);
+    }
+    cardsContainer.appendChild(docFragment);
+    cardsContainer.classList.add("loaded");
+}
+
+requestData();
+
+// START CARDS MOUSE EVENTS
+cardsContainer.addEventListener("mouseover", (e) =>{
+    if (cardsContainer.classList.contains("loaded")){
+        const cards = document.querySelectorAll(".projects--card");
+        cards.forEach(card => {
+            card.addEventListener("mouseenter", (e)=>{
+                e.target.querySelector(".card--info").style.opacity= '1'
+                e.target.querySelector("img").style.opacity = ".05"
+            })
+            card.addEventListener("mouseleave", (e)=>{
+                e.target.querySelector(".card--info").style.opacity= '0'
+                e.target.style.backgroundColor = "transparent"
+                e.target.querySelector("img").style.opacity = "1"
+            })
+        })
+    }
+})
+// END CARDS MOUSE EVENTS
