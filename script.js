@@ -41,18 +41,21 @@ setInterval(() => {
 
 /* ### END JS dynamic msg ###*/
 
-const cardFlipper = document.querySelector(".color-flipper");
+const projectCards = document.querySelectorAll(".projects--card");
 
-cardFlipper.addEventListener("mouseenter", (e)=>{
-    document.querySelector(".color-flipper > .card--info").style.opacity= '1'
-    document.getElementById("img-flipper").style.opacity = ".05"
+projectCards.forEach( card =>{
+    card.addEventListener("mouseenter", (e)=>{
+        e.target.querySelector(".card--info").style.opacity= '1'
+        e.target.querySelector("img").style.opacity = ".05"
+    })
+
+    card.addEventListener("mouseleave", (e)=>{
+        e.target.querySelector(".card--info").style.opacity= '0'
+        e.target.style.backgroundColor = "transparent"
+        e.target.querySelector("img").style.opacity = "1"
+    })
 })
 
-cardFlipper.addEventListener("mouseleave", (e)=>{
-    document.querySelector(".color-flipper > .card--info").style.opacity= '0'
-    e.target.style.backgroundColor = "transparent"
-    document.getElementById("img-flipper").style.opacity = "1"
-})
 
 const btnTheme = document.getElementById("btn-theme");
 let canLightTheme = true;
