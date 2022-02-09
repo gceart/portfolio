@@ -4,13 +4,17 @@
             "name": "Color Flipper",
             "description": "Hit the button to change the background color to a new random color, also you can copy it to clipboard!",
             "image": "./img/colorFlipper.png",
-            "class" : "color-flipper"
+            "class" : "color-flipper",
+            "link" : "",
+            "repo": "https://www.github.com/GaelCeart/color-flipper/"
         },
         {
             "name": "Lazy Load",
             "description": "Posts section with lazy load using Intersection Observer and fetch to load the data file. Comments will attach to the post" ,
             "image": "./img/lazyLoad.png",
-            "class" : "lazy-load"
+            "class" : "lazy-load",
+            "link" : "",
+            "repo": "https://www.github.com/GaelCeart/lazy-load-example/"
         }
     ]
 }

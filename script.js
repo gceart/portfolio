@@ -68,7 +68,7 @@ btnTheme.addEventListener('click',changeMode)
 
 const cardsContainer = document.querySelector(".cards-container");
 // START CREATE PROJECT CARD ELEMENT
-const createCard = (title, description, image, className) => {
+const createCard = (title, description, image, className, link, repo) => {
     const card = document.createElement("ARTICLE");
     const cardInfo = document.createElement("DIV");
     const cardTitle = document.createElement("H4");
@@ -77,9 +77,6 @@ const createCard = (title, description, image, className) => {
     const cardBtnLink = document.createElement("A");
     const cardBtnRepo = document.createElement("A");
     const img = document.createElement("IMG");
-
-    cardTitle.textContent = `${title}`;
-    cardDescription.textContent = `${description}`;
 
     card.classList.add("projects--card",`${className}`);
     cardInfo.classList.add("card--info");
@@ -91,6 +88,11 @@ const createCard = (title, description, image, className) => {
     img.classList.add("img");
     img.setAttribute("src",`${image}`);
     img.setAttribute("alt",`${title}`);
+
+    cardTitle.textContent = `${title}`;
+    cardDescription.textContent = `${description}`;
+    cardBtnLink.setAttribute("href",link);
+    cardBtnRepo.setAttribute("href",repo);
 
     cardBtnContainer.appendChild(cardBtnLink);
     cardBtnContainer.appendChild(cardBtnRepo);
@@ -108,7 +110,7 @@ const requestData = async () => {
     const data = await req.json();
     const docFragment = new DocumentFragment;
     for(let i = 0; i < data.projects.length; i++){
-        const newCard = createCard(data.projects[i].name, data.projects[i].description, data.projects[i].image, data.projects[i].class);
+        const newCard = createCard(data.projects[i].name, data.projects[i].description, data.projects[i].image, data.projects[i].class, data.projects[i].link, data.projects[i].repo);
         docFragment.appendChild(newCard);
     }
     cardsContainer.appendChild(docFragment);
