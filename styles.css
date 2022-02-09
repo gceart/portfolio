@@ -23,6 +23,7 @@ html {
     margin: auto;
     font-weight: 600;
     overflow: none;
+    min-width: fit-content;
 }
 
 .nav {
@@ -113,7 +114,6 @@ header {
     height: auto;
     color: transparent;
     border-bottom: 4px solid var(--color-accent);
-    border-radius: 20px 0px 0px 400px;
 }
 
 .dynamic-msg {
@@ -193,7 +193,7 @@ header {
 
 .btn {
     position:relative;
-    top:30%;
+    top:40%;
     border:none;
     border-radius: 100%;
     padding: .5em; 
@@ -251,8 +251,9 @@ header {
         display: flex;
     }
 
-    .img {
+    .img-me {
         position: relative;
+        border-radius: 20px 0px 0px 400px;
     }
 
     .intro {
