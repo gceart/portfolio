@@ -62,17 +62,19 @@ let canLightTheme = true;
 
 const changeMode = () => {
     if (canLightTheme){
-        document.documentElement.style.setProperty('--color-accent', '#30323d');
-        document.documentElement.style.setProperty('--color-dark', '#cdd1c4');
-        document.documentElement.style.setProperty('--color-light', '#4d5061');
-        document.documentElement.style.setProperty('--color-primary', '#5c80bc');
+        document.documentElement.style.setProperty('--color-accent', '#ffffff');
+        document.documentElement.style.setProperty('--color-background', '#73C2EA');
+        document.documentElement.style.setProperty('--color-light', '#26547c');
+        document.documentElement.style.setProperty('--color-primary', '#06d6a0');
+        document.documentElement.style.setProperty('--color-secondary', '#535353');
         canLightTheme = false;
         document.querySelector("#btn-theme > i").classList.replace("fa-moon","fa-sun")
     } else {
         document.documentElement.style.setProperty('--color-accent', '#e8c547');
-        document.documentElement.style.setProperty('--color-dark', '#30323d');
+        document.documentElement.style.setProperty('--color-background', '#30323d');
         document.documentElement.style.setProperty('--color-light', '#cdd1c4');
         document.documentElement.style.setProperty('--color-primary', '#4d5061');
+        document.documentElement.style.setProperty('--color-secondary', '#5c80bc');
         canLightTheme = true;
         document.querySelector("#btn-theme > i").classList.replace("fa-sun","fa-moon")
     }
