@@ -73,6 +73,7 @@ const createCard = (title, description, image, className) => {
     const cardInfo = document.createElement("DIV");
     const cardTitle = document.createElement("H4");
     const cardDescription = document.createElement("P");
+    const cardBtnContainer = document.createElement("DIV");
     const cardBtnLink = document.createElement("A");
     const cardBtnRepo = document.createElement("A");
     const img = document.createElement("IMG");
@@ -84,16 +85,18 @@ const createCard = (title, description, image, className) => {
     cardInfo.classList.add("card--info");
     cardTitle.classList.add("card--title");
     cardDescription.classList.add("card--description");
+    cardBtnContainer.classList.add("btn-container");
     cardBtnLink.classList.add("btn", "btn-site", "fas", "fa-external-link-alt");
     cardBtnRepo.classList.add("btn", "btn-repo", "fab", "fa-github");
     img.classList.add("img");
     img.setAttribute("src",`${image}`);
     img.setAttribute("alt",`${title}`);
 
+    cardBtnContainer.appendChild(cardBtnLink);
+    cardBtnContainer.appendChild(cardBtnRepo);
     cardInfo.appendChild(cardTitle);
     cardInfo.appendChild(cardDescription);
-    cardInfo.appendChild(cardBtnLink);
-    cardInfo.appendChild(cardBtnRepo);
+    cardInfo.appendChild(cardBtnContainer)
     card.appendChild(cardInfo);
     card.appendChild(img);
     return card;
