@@ -92,7 +92,9 @@ const createCard = (title, description, image, className, link, repo) => {
     cardTitle.textContent = `${title}`;
     cardDescription.textContent = `${description}`;
     cardBtnLink.setAttribute("href",link);
+    cardBtnLink.setAttribute("target", "_blank");
     cardBtnRepo.setAttribute("href",repo);
+    cardBtnRepo.setAttribute("target", "_blank");
 
     cardBtnContainer.appendChild(cardBtnLink);
     cardBtnContainer.appendChild(cardBtnRepo);
