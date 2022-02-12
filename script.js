@@ -107,12 +107,16 @@ const createCard = (title, description, image, className, link, repo) => {
 }
 // END CREATE PROJECT CARD ELEMENT
 
+const language = "en";
+
 const requestData = async () => {
     const req = await fetch("data");
     const data = await req.json();
+    const idioma = "es";
     const docFragment = new DocumentFragment;
     for(let i = 0; i < data.projects.length; i++){
-        const newCard = createCard(data.projects[i].name, data.projects[i].description, data.projects[i].image, data.projects[i].class, data.projects[i].link, data.projects[i].repo);
+        const description = (language == "en") ? data.projects[i].description.en : data.projects[i].description.es; 
+        const newCard = createCard(data.projects[i].name, description, data.projects[i].image, data.projects[i].class, data.projects[i].link, data.projects[i].repo);
         docFragment.appendChild(newCard);
     }
     cardsContainer.appendChild(docFragment);
