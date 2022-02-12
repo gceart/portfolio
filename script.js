@@ -38,13 +38,28 @@ langEN.addEventListener("click",()=>{
 
 // START INFO
 const position = document.getElementById("position");
-const dynamicMsg = document.querySelector(".dynamic-msg");
+const msgIntro = document.getElementById("msg-intro");
 const changingMsgEl = document.getElementById("changing-msg");
 const aboutMe = document.getElementById("about");
 
-document.addEventListener("load", ()=>position.textContent = data.info.position.es);
 
+const setInfo = async ()=> {
+    let data = await pendingData; 
+    console.log(data)
+    let pos = (language == "en") ? data.info.position.en :
+                                   data.info.position.es;
+    position.textContent = pos;
 
+    let dynMsg = (language == "en") ? data.info.msgIntro.en :
+                                   data.info.msgIntro.es;
+    msgIntro.textContent = dynMsg;
+
+    let about = (language == "en") ? data.info.about.en :
+                                   data.info.about.es;
+    aboutMe.innerHTML = about;
+}
+
+setInfo();
 // END INFO
 
 // START JS dynamic msg
@@ -157,7 +172,7 @@ const createCard = (title, description, image, className, link, repo) => {
 
 const loadCards = async () => {
     const docFragment = new DocumentFragment;
-    const data = await pendingData;
+    let data = await pendingData;
     for(let i = 0; i < data.projects.length; i++){
         const description = (language == "en") ? data.projects[i].description.en : data.projects[i].description.es; 
         const newCard = createCard(data.projects[i].name, description, data.projects[i].image, data.projects[i].class, data.projects[i].link, data.projects[i].repo);
