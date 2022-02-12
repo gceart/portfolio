@@ -46,11 +46,11 @@ const btnTheme = document.getElementById("btn-theme");
 let canLightTheme = true;
 const changeMode = () => {
     if (canLightTheme){
-        document.documentElement.style.setProperty('--color-accent', '#ffffff');
-        document.documentElement.style.setProperty('--color-background', '#73C2EA');
-        document.documentElement.style.setProperty('--color-light', '#26547c');
-        document.documentElement.style.setProperty('--color-primary', '#06d6a0');
-        document.documentElement.style.setProperty('--color-secondary', '#535353');
+        document.documentElement.style.setProperty('--color-background', '#fcfcfc');
+        document.documentElement.style.setProperty('--color-primary', '#aaccff');
+        document.documentElement.style.setProperty('--color-secondary', '#5c80bc');
+        document.documentElement.style.setProperty('--color-accent', '#2c1c66');
+        document.documentElement.style.setProperty('--color-light', '#233021');
         canLightTheme = false;
         document.querySelector("#btn-theme > i").classList.replace("fa-moon","fa-sun")
     } else {
