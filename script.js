@@ -139,3 +139,17 @@ cardsContainer.addEventListener("mouseover", (e) =>{
     }
 })
 // END CARDS MOUSE EVENTS
+
+// START LANGUAGE MENU EVENTS
+const langBox = document.querySelector(".lang-box");
+const langMenu = document.querySelector(".lang-menu");
+
+langBox.addEventListener("mouseover",()=>{
+    langMenu.classList.toggle("appear",true);
+})
+
+langBox.addEventListener("mouseleave",()=>{
+    langMenu.classList.toggle("appear",false);
+})
+
+// END LANGUAGE MENU EVENTS
