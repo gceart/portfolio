@@ -57,7 +57,7 @@ html {
     height: max-content;
     text-align: left;
     transition: .25s;
-    left:-700%;
+    left:-900%;
 }
 
 .appear {
