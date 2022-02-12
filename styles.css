@@ -37,7 +37,7 @@ html {
 .lang-box::after {
     position: absolute;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    content:"v";
+    content:">";
     font-weight: 300;
     font-size: .8em;
     top:50%;
