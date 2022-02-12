@@ -1,4 +1,13 @@
 "use strict";
+//START DATA REQUEST
+const requestData = async () => {
+    const req = await fetch("data");
+    const data = await req.json();
+    return data;
+}
+const pendingData = requestData();
+//END DATA REQUEST
+
 const language = localStorage.getItem("lang") || "en";
 document.querySelector(".lang").textContent = language.toUpperCase();
 
@@ -27,8 +36,18 @@ langEN.addEventListener("click",()=>{
 })
 // END LANGUAGE MENU EVENTS
 
-// START JS dynamic msg
+// START INFO
+const position = document.getElementById("position");
+const dynamicMsg = document.querySelector(".dynamic-msg");
 const changingMsgEl = document.getElementById("changing-msg");
+const aboutMe = document.getElementById("about");
+
+document.addEventListener("load", ()=>position.textContent = data.info.position.es);
+
+
+// END INFO
+
+// START JS dynamic msg
 const phrases = [ "code", "resolve problems", "learn"]
 let isTyping = changingMsgEl.getAttribute("animation") == "typing"; 
 let indexMsg = 0;
@@ -136,11 +155,9 @@ const createCard = (title, description, image, className, link, repo) => {
 // END CREATE PROJECT CARD ELEMENT
 
 
-const requestData = async () => {
-    const req = await fetch("data");
-    const data = await req.json();
-    const idioma = "es";
+const loadCards = async () => {
     const docFragment = new DocumentFragment;
+    const data = await pendingData;
     for(let i = 0; i < data.projects.length; i++){
         const description = (language == "en") ? data.projects[i].description.en : data.projects[i].description.es; 
         const newCard = createCard(data.projects[i].name, description, data.projects[i].image, data.projects[i].class, data.projects[i].link, data.projects[i].repo);
@@ -150,7 +167,7 @@ const requestData = async () => {
     cardsContainer.classList.add("loaded");
 }
 
-requestData();
+loadCards();
 
 // START CARDS MOUSE EVENTS
 cardsContainer.addEventListener("mouseover", (e) =>{
