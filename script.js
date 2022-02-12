@@ -1,4 +1,32 @@
 "use strict";
+const language = localStorage.getItem("lang") || "en";
+document.querySelector(".lang").textContent = language.toUpperCase();
+
+// START LANGUAGE MENU EVENTS
+const langBox = document.querySelector(".lang-box");
+const langMenu = document.querySelector(".lang-menu");
+const langES = document.getElementById("lang-es");
+const langEN = document.getElementById("lang-en");
+
+langBox.addEventListener("mouseover",()=>{
+    langMenu.classList.toggle("appear",true);
+})
+
+langBox.addEventListener("mouseleave",()=>{
+    langMenu.classList.toggle("appear",false);
+})
+
+langES.addEventListener("click",()=>{
+    localStorage.setItem("lang", "es");
+    window.location.reload();
+})
+
+langEN.addEventListener("click",()=>{
+    localStorage.setItem("lang", "en");
+    window.location.reload();
+})
+// END LANGUAGE MENU EVENTS
+
 // START JS dynamic msg
 const changingMsgEl = document.getElementById("changing-msg");
 const phrases = [ "code", "resolve problems", "learn"]
@@ -107,32 +135,6 @@ const createCard = (title, description, image, className, link, repo) => {
 }
 // END CREATE PROJECT CARD ELEMENT
 
-const language = localStorage.getItem("lang") || "en";
-
-// START LANGUAGE MENU EVENTS
-const langBox = document.querySelector(".lang-box");
-const langMenu = document.querySelector(".lang-menu");
-const langES = document.getElementById("lang-es");
-const langEN = document.getElementById("lang-en");
-
-langBox.addEventListener("mouseover",()=>{
-    langMenu.classList.toggle("appear",true);
-})
-
-langBox.addEventListener("mouseleave",()=>{
-    langMenu.classList.toggle("appear",false);
-})
-
-langES.addEventListener("click",()=>{
-    localStorage.setItem("lang", "es");
-    window.location.reload();
-})
-
-langEN.addEventListener("click",()=>{
-    localStorage.setItem("lang", "en");
-    window.location.reload();
-})
-// END LANGUAGE MENU EVENTS
 
 const requestData = async () => {
     const req = await fetch("data");
