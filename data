@@ -6,14 +6,13 @@
             "es" : "Desarrollador front end principiante"
         },
         "msgIntro": {
-            "en" : "Hello, I am Gastón and I like ",
+            "en" : "Hello, I am Gastón and I like to ",
             "es" : "Hola, soy Gastón y me gusta "
         },
         "about": {
             "en" : "I've been a passionate of technology since I was a little kid. <br><br>Currently I'm a student of Bachelor's Degree of Computer Systems.<br><br>I would like improve my abilities and become a full-stack developer.<br><br>In order to keep learning, I'm constantly following online courses on video.",
-            "es" : "Me apasiona la tecnología desde que tengo memoria.<br><br>Actualmente me encuentro cursando la Licenciatura en Sistemas<br><br>Me gustaría mejorar mis habilidades y convertirme en desarrollador full-stack<br><br>Para seguir aprendiendo, sigo cursos online en video."
+            "es" : "Me apasiona la tecnología desde que tengo memoria.<br><br>Actualmente me encuentro cursando la Licenciatura en Sistemas.<br><br>Me gustaría mejorar mis habilidades y convertirme en desarrollador full-stack.<br><br>Para seguir aprendiendo, sigo cursos online en video."
         }
-
     },
     "projects" : [
         {
