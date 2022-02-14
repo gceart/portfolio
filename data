@@ -14,6 +14,12 @@
             "es" : "Me apasiona la tecnología desde que tengo memoria.<br><br>Actualmente me encuentro cursando la Licenciatura en Sistemas.<br><br>Me gustaría mejorar mis habilidades y convertirme en desarrollador full-stack.<br><br>Para seguir aprendiendo, sigo cursos online en video."
         }
     },
+    
+    "phrases": {
+        "en" : ["code", "resolve problems", "learn"],
+        "es" : ["escribir código", "resolver problemas", "aprender"]
+    },
+
     "projects" : [
         {
             "name": "Color Flipper",
