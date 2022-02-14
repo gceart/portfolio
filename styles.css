@@ -27,12 +27,20 @@ html {
     min-width: fit-content;
 }
 
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--color-accent);
+}
+
 .lang-box {
     text-align: center;
-    position: absolute;
     margin-left: 1em;
     padding:1em 0 1em 0;
     color: var(--color-accent);
+    margin: auto;
+    cursor: pointer;
 }
 
 .lang-box::after {
@@ -50,7 +58,8 @@ html {
 .lang-menu {
     margin-top: 1.1em;
     margin-left: -1em;
-    position: absolute;
+    display: none;
+    position: relative;
     color: var(--color-background);
     background-color: var(--color-accent);
     z-index: 30;
@@ -58,12 +67,14 @@ html {
     height: max-content;
     text-align: left;
     transition: .25s;
-    left:-900%;
+    left:-2000%;
 }
 
 .appear {
+    position: absolute;
+    display: block;
     transition: .25s;
-    left:0;
+    left:15vw;
 }
 
 .lang-menu li {
@@ -89,7 +100,7 @@ html {
     width: 100%;
     background-color: var(--color-background) ;
     color: var(--color-accent);
-    justify-self: center;
+    display: flex;
 }
 
 .nav-items {
@@ -116,26 +127,16 @@ html {
     transition: .25s
 }
 
-header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-bottom: 3px solid var(--color-accent);
-}
-
 #btn-theme {
     background-color: var(--color-background);
     color: var(--color-accent);
     border: none;
-    position: absolute;
     font-size: 1em;
     padding: .4em;
     border-radius: 100%;
     text-align: center;
-    right: 1%;
-    top: 50%;
-    transform: translateY(-50%);
     transition: .25s;
+    margin: auto;
 }
 
 #btn-theme:hover {
