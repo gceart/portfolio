@@ -63,7 +63,13 @@ setInfo();
 // END INFO
 
 // START JS dynamic msg
-const phrases = [ "code", "resolve problems", "learn"]
+
+let phrases = [];
+const setPhrases = async () => {
+    let data = await pendingData;
+    phrases = (language == "en") ? data.phrases.en : data.phrases.es; 
+}
+setPhrases()
 let isTyping = changingMsgEl.getAttribute("animation") == "typing"; 
 let indexMsg = 0;
 let msg = changingMsgEl.textContent;
