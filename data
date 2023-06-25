@@ -58,6 +58,18 @@
             "repo" : "https://github.com/Leandr0Fr/p3-tp1-wordle"
         },
         {
+            "name": "Clustering",
+            "description":
+                {
+                "en" : "Cluster generator based on given vertices. Using Kruskal's algorithm, a MST is created from a complete graph to subsequently generate clusters",
+                "es" : "Generador de clústeres en base a vértices dados. Usando el algoritmo de Kruskal, de un grafo completo se crea un AGM para posteriormente generar clústeres"
+                },
+            "image": "./img/clustering.png",
+            "class": "clustering",
+            "link" : "",
+            "repo" : "https://github.com/locomaldelcoco/Clustering"
+        },
+        {
             "name": "Álbum mundial 2022",
             "description":
                 {
