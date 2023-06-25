@@ -65,15 +65,15 @@ header {
     width: 9em;
     height: max-content;
     text-align: left;
-    transition: .25s;
-    left:-2000%;
+    top:-50%;
+    transition: all .25s;
 }
 
 .appear {
     position: absolute;
     display: block;
-    transition: .25s;
-    left:15vw;
+    transition: all .25s;
+    top: 15%;
 }
 
 .lang-li{
