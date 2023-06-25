@@ -61,11 +61,21 @@ export const addEvents = () => {
                 card.addEventListener("mouseenter", (e)=>{
                     e.target.querySelector(".card--info").style.opacity= '1'
                     e.target.querySelector("img").style.opacity = ".05"
+                    e.target.querySelector(".btn-container").style.cssText = `
+                                                                            position: relative;
+                                                                            left: 0; 
+                                                                            opacity: 1;
+                                                                            `
                 })
                 card.addEventListener("mouseleave", (e)=>{
                     e.target.querySelector(".card--info").style.opacity= '0'
                     e.target.style.backgroundColor = "transparent"
                     e.target.querySelector("img").style.opacity = "1"
+                    e.target.querySelector(".btn-container").style.cssText = `
+                                                                            position: absolute;
+                                                                            left: -2000%; 
+                                                                            opacity: 0;
+                                                                            `
                 })
             })
         }

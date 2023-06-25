@@ -254,6 +254,10 @@ header {
     justify-self: flex-end;
     justify-content: center;
     margin-bottom: 1em;
+    position: absolute;
+    left: -2000%;
+    opacity: 0;
+    transition: left .1s, opacity .6s;
 }
 
 .btn {
