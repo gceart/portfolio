@@ -280,7 +280,7 @@ header {
 .projects--card img {
     width: 100%; 
     height: calc(100% - 30px);
-    object-fit: contain;
+    object-fit: cover;
     object-position: top;
     border-radius: 16px;
     transition: .25s;
