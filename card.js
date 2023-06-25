@@ -30,7 +30,7 @@ export const create = (title, description, image, className, link, repo) => {
     cardBtnRepo.setAttribute("href",repo);
     cardBtnRepo.setAttribute("target", "_blank");
 
-    cardBtnContainer.appendChild(cardBtnLink);
+    if (link != "") cardBtnContainer.appendChild(cardBtnLink);
     cardBtnContainer.appendChild(cardBtnRepo);
     cardInfo.appendChild(cardTitle);
     cardInfo.appendChild(cardDescription);
