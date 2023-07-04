@@ -16,8 +16,8 @@
     },
     
     "phrases": {
-        "en" : ["code", "resolve problems", "learn"],
-        "es" : ["escribir código", "resolver problemas", "aprender"]
+        "en" : ["think", "resolve problems", "learn"],
+        "es" : ["pensar", "resolver problemas", "aprender"]
     },
 
     "projects" : [
@@ -28,7 +28,7 @@
                 "en" : "Press the button to change the background colour to a new randomly generated colour. Also you can copy the hex value to clipboard!",
                 "es" : "Presioná el botón para cambiar el color de fondo por un color generado aleatoriamente. ¡También podés copiar el valor hexadecimal al portapapeles!"
                 },
-            "image": "./img/colorFlipper.png",
+            "image": "./img/projects/colorFlipper.png",
             "class" : "color-flipper",
             "link" : "https://gaelceart.github.io/color-flipper/",
             "repo": "https://www.github.com/gaelceart/color-flipper/"
@@ -40,7 +40,7 @@
               "en" : "Posts section with lazy load using Intersection Observer and fetch to load the data file. Comments will attach to the post" ,
               "es" : "Sección de publicaciones con carga progresiva usando Intersection Observer y fetch para cargar el archivo de datos. Los comentarios se acoplan a la publicación"
             },
-            "image": "./img/lazyLoad.png",
+            "image": "./img/projects/lazyLoad.png",
             "class" : "lazy-load",
             "link" : "https://gaelceart.github.io/lazy-load/",
             "repo": "https://www.github.com/gaelceart/lazy-load/"
@@ -52,7 +52,7 @@
                 "en" : "Wordle-like game. Try to guess the secret word in six tries by hints of your previous answers",
                 "es" : "Juego tipo Wordle. Intentá adivinar la palabra secreta en seis intentos mediante pistas de tus respuestas anteriores"
                 },
-            "image": "./img/wungsdle.png",
+            "image": "./img/projects/wungsdle.png",
             "class": "wungsdle",
             "link" : "",
             "repo" : "https://github.com/Leandr0Fr/p3-tp1-wordle"
@@ -64,7 +64,7 @@
                 "en" : "Cluster generator based on given vertices. Using Kruskal's algorithm, a MST is created from a complete graph to subsequently generate clusters",
                 "es" : "Generador de clústeres en base a vértices dados. Usando el algoritmo de Kruskal, de un grafo completo se crea un AGM para posteriormente generar clústeres"
                 },
-            "image": "./img/clustering.png",
+            "image": "./img/projects/clustering.png",
             "class": "clustering",
             "link" : "",
             "repo" : "https://github.com/locomaldelcoco/Clustering"
@@ -76,7 +76,7 @@
                 "en" : "Simulator with perspective on sales of the FIFA 2022 World Cup figurines album",
                 "es" : "Simulador con perspectiva en ventas del álbum de figuritas de la Copa del Mundo FIFA 2022"
                 },
-            "image": "./img/albumMundial.png",
+            "image": "./img/projects/albumMundial.png",
             "class": "album-mundial",
             "link" : "",
             "repo" : "https://github.com/gaelceart/album-mundial"
