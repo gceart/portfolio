@@ -18,7 +18,7 @@ export const create = (title, description, image, className, link, repo) => {
     cardDescription.classList.add("card--description");
     cardBtnContainer.classList.add("btn-container");
     cardBtnLink.classList.add("btn", "btn-site", "fas", "fa-external-link-alt");
-    cardBtnRepo.classList.add("btn", "btn-repo", "fab", "fa-github");
+    cardBtnRepo.classList.add("btn", "btn-repo", "fab", selectRepoLogo(repo));
     img.classList.add("img");
     img.setAttribute("src",`${image}`);
     img.setAttribute("alt",`${title}`);
@@ -81,4 +81,11 @@ export const addEvents = () => {
         }
     })
     // END CARDS MOUSE EVENTS
+}
+
+const selectRepoLogo = repo => {
+    let logo = "fa-" 
+    if (repo.includes("gitlab")) logo += "gitlab";
+    else logo += "github";
+    return logo;
 }
