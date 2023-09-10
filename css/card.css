@@ -85,15 +85,31 @@
     transition: .25s;
 }
 
-.wungsdle {
-    max-width: 250px;
-}
 
 .album-mundial, .clustering {
-    max-width: 440px;
+    max-width: 300px;
 }
 
 .supermielle {
-    min-width: 640px;
+    min-width: 300px;
+    height: 300px;
 }
 
+.supermielle img {
+    object-position: left;
+}
+
+@media (min-width: 965px) {
+    .wungsdle {
+        max-width: 250px;
+    }
+
+    .album-mundial, .clustering {
+        max-width: 440px;
+    }
+
+    .supermielle {
+        max-width: 440px;
+        height: 300px;
+    }
+}
