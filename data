@@ -80,6 +80,18 @@
             "class": "album-mundial",
             "link" : "",
             "repo" : "https://github.com/gaelceart/album-mundial"
+        },
+        {
+            "name": "Supermielle",
+            "description":
+                {
+                "en" : "Credit Card System of a bank we called 'Supermielle'. It was done with PostgreSQL and a little demo of BoltDB",
+                "es" : "Sistema de Tarjetas de Crédito de un banco que llamamos 'Supermielle'. Hecho con PostgreSQL y una pequeña demo de BoltDB"
+                },
+            "image": "./img/projects/supermielle.png",
+            "class": "supermielle",
+            "link" : "",
+            "repo" : "https://gitlab.com/gastonv/martinelli-soria-villalba-tp"
         }
     ]
 }
