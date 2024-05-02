@@ -16,7 +16,9 @@ export default function Section (props) {
         {title}
         <small>{subtitle}</small>
       </h2>
-      {content}
+      <content className='flex gap-2 flex-wrap justify-center'>
+        {content}
+      </content>
     </section>
   )
 }

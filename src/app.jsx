@@ -14,7 +14,7 @@ export function App () {
         <Section title='Projects' data={{ projects }} />
         <Section title='Contact' />
       </span>
-      <img src='/src/assets/bg.jpg' className='min-w-dvw min-h-dvh absolute -z-10 object-cover' />
+      <img src={bg} className='fixed min-w-dvw min-h-screen -z-50 object-cover' />
     </div>
   )
 }
