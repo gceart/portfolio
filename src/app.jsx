@@ -1,20 +1,22 @@
 import { useState } from 'preact/hooks'
 import Note from './components/Note'
 import Section from './components/Section'
-import { projects } from '../data/data'
+import Projects from './components/Projects/Projects'
 import bg from './assets/bg.jpg'
 
 export function App () {
   return (
-    <div className='flex flex-col min-w-dvw min-h-screen bg-black bg-opacity-60 bg-gradient-to-t'>
+    <main className='flex flex-col min-w-dvw min-h-screen bg-black bg-opacity-60 py-6'>
       <span className='w-3/4 gap-2 self-center'>
         <Section title='About Me' />
-        <Note command='whoami' text='Gastón' />
+        <span className='flex justify-center'>
+          <Note command='whoami' text='Gastón' />
+        </span>
+        <Projects />
         <Section title='Knowledge' />
-        <Section title='Projects' data={{ projects }} />
         <Section title='Contact' />
       </span>
-      <img src={bg} className='fixed min-w-dvw min-h-screen -z-50 object-cover' />
-    </div>
+      <img src={bg} className='fixed min-w-dvw min-h-screen -z-50 object-cover top-0 left-0' />
+    </main>
   )
 }

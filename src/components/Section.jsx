@@ -1,14 +1,5 @@
-import Project from './Project'
-
 export default function Section (props) {
-  const { title, subtitle, data } = props
-  let content = null
-
-  if (data?.projects) {
-    content = data.projects.map(p => {
-      return <Project key={p.class} data={p} />
-    })
-  }
+  const { title, subtitle, content } = props
 
   return (
     <section id={title} className='flex flex-col w-full gap-2'>
@@ -16,9 +7,7 @@ export default function Section (props) {
         {title}
         <small>{subtitle}</small>
       </h2>
-      <content className='flex gap-2 flex-wrap justify-center'>
-        {content}
-      </content>
+      {content}
     </section>
   )
 }
