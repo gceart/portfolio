@@ -10,9 +10,9 @@ export default function Project (props) {
     <article className='col-auto relative flex flex-col gap-2 border-2 border-pink-200 rounded-md max-w-full h-64 hover:border-pink-500 transition-all text-base'>
 
       <div className='flex flex-col gap-2 px-4 relative p-2 bg-black bg-opacity-50 w-full min-h-0 h-full text-pink-300 rounded-md backdrop-blur-sm'>
-        <header className='flex justify-between'>
+        <header className='flex justify-between relative'>
           <h3 className='font-bold text-xl'>{name}</h3>
-          {technologies}
+          <span className='absolute -top-1 -right-1'>{technologies}</span>
         </header>
         <p className='row-start-2 text-lg'>{description}</p>
         <footer className='flex w-full h-full justify-evenly items-end py-4'>
