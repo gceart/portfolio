@@ -1,1 +1,1 @@
-export const phrases = ['think', 'resolve problems', 'learn']
+export const phrases = ['to think', 'to resolve problems', 'to learn', 'plain text', 'Linux', 'UNIX', 'ñoquis', 'challenges', 'games']
