@@ -4,8 +4,8 @@ export default function Note (props) {
   const info = text.split('\n')[1]
 
   return (
-    <article className='w-full text-xl text-pink-200 rounded-md p-3 bg-black bg-opacity-50'>
-      <strong>{`> ${command}`}</strong>
+    <article className='w-full text-xl text-white rounded-md p-3 bg-black bg-opacity-50'>
+      <strong className='text-pink-200'>{`> ${command}`}</strong>
       <p>{me}</p>
       <p>{info}</p>
     </article>

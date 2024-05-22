@@ -5,10 +5,11 @@ import { projects } from '../../../data/projects.js'
 
 export default function Projects () {
   const [showAll, setShowAll] = useState(false)
+  const arrow = showAll ? 'unfold_less' : 'unfold_more'
   const elements = projects.map(p => {
     return <Project key={p.class} data={p} />
   })
-  const more = <span className='text-xs hover:scale-105 cursor-pointer' onClick={() => setShowAll(old => !old)}>{'>>'}</span>
+  const more = <span className='material-symbols-outlined hover:scale-105 cursor-pointer flex ' onClick={() => setShowAll(old => !old)}>{arrow}</span>
 
   const mainProjects = (
     <>

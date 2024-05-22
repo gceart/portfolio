@@ -1,0 +1,58 @@
+.animation-UR {
+  bottom: -10%;
+  left: -10%;
+  animation: slideUR 12s ease-in
+}
+
+.animation-DR {
+  top: -10%;
+  left: -10%;
+  animation: slideDR 12s ease-in
+}
+
+.animation-UL {
+  bottom: -10%;
+  right: -10%;
+  animation: slideUR 12s ease-in
+}
+.animation-DL {
+  top: -10%;
+  right: -10%;
+  animation: slideDL 12s ease-in
+}
+
+@keyframes slideUR {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(120vw, -120vh);
+  }
+}
+
+@keyframes slideDR {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(120vw, 120vh);
+  }
+}
+
+@keyframes slideUL {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-120vw, -120vh);
+  }
+}
+
+@keyframes slideDL {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-120vw, 120vh);
+  }
+}
