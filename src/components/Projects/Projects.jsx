@@ -1,7 +1,8 @@
-import { useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 import Section from '../Section'
 import Project from './Project'
 import { projects } from '../../../data/projects.js'
+import './projects.css'
 
 export default function Projects () {
   const [showAll, setShowAll] = useState(false)
@@ -9,7 +10,31 @@ export default function Projects () {
   const elements = projects.map(p => {
     return <Project key={p.class} data={p} />
   })
-  const more = <span className='material-symbols-outlined hover:scale-105 cursor-pointer flex ' onClick={() => setShowAll(old => !old)}>{arrow}</span>
+
+  const toggleAnimation = () => {
+    const remainElement = document.getElementById('remain')
+    if (showAll) {
+      remainElement?.classList.remove('unfold')
+      remainElement?.classList.add('fold')
+      setTimeout(() => setShowAll(false), 125)
+    } else {
+      setShowAll(true)
+    }
+  }
+
+  useEffect(() => {
+    const remainElement = document.getElementById('remain')
+    if (showAll) {
+      remainElement?.classList.remove('fold')
+      remainElement?.classList.add('unfold')
+    }
+  }, [showAll])
+
+  const handleShow = () => {
+    toggleAnimation()
+  }
+
+  const more = <span className='material-symbols-outlined hover:scale-105 cursor-pointer flex ' onClick={() => handleShow()}>{arrow}</span>
 
   const mainProjects = (
     <>
@@ -18,14 +43,15 @@ export default function Projects () {
       {elements[2]}
     </>
   )
+
   const remain = (
-    <span className={`${showAll ? 'h-auto opacity-100' : 'h-0 opacity-0 hidden'}  col-span-2 grid grid-cols-2 transition-all`}> {elements.splice(3)} </span>
+    <section id='remain'> {elements.splice(3)} </section>
   )
 
   const content = (
     <content className='relative grid grid-cols-2 gap-2 w-full'>
       {mainProjects}
-      {remain}
+      {showAll && remain}
     </content>
   )
 

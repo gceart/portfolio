@@ -1,0 +1,44 @@
+.fold {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column: span 2 / span 2;
+  animation: fold .125s;
+  transition: all .125s;
+  height: 0;
+  transform-origin: top;
+}
+
+.unfold {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column: span 2 / span 2;
+  animation: unfold .125s;
+  transition: all .125s;
+  height: max-content;
+  transform-origin: top;
+}
+
+@keyframes fold {
+ 0% {
+   transform: scaleY(1);
+   height: max-content;
+ }
+ 100% {
+   transform: scaleY(0);
+   height: 0;
+   opacity: 0;
+ }
+}
+
+@keyframes unfold {
+ 0% {
+   transform: scaleY(0);
+   height: 100%;
+   opacity: 0;
+ }
+ 100% {
+   transform: scaleY(1);
+   height: 100%;
+   opacity: 1;
+ }
+}

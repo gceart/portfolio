@@ -6,4 +6,7 @@
 * {
   font-family: monospace;
   box-sizing: border-box;
+   text-shadow:
+    -1px 1px 0 #222,
+     1px 1px 0 #222;
 }
