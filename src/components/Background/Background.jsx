@@ -30,7 +30,7 @@ export default function Background () {
     <>
       <img src={bg} className='fixed min-w-dvw min-h-screen -z-50 object-cover top-0 left-0' />
       <div className='fixed min-w-dvw min-h-dvh'>
-        <span id='phrase' className='-z-20 -top-80 absolute rotate-12 text-pink-300 text-nowrap max-w-fit max-h-fit'>{phrase}</span>
+        <span id='phrase' className='-z-20 -top-80 absolute rotate-12 text-gray-50 text-nowrap max-w-fit max-h-fit'>{phrase}</span>
       </div>
     </>
   )

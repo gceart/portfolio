@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url('./assets/UbuntuMono-Regular.ttf') format('truetype');
+}
+
 
 * {
-  font-family: monospace;
+  font-family: 'UbuntuMono', monospace;
   box-sizing: border-box;
    text-shadow:
     -1px 1px 0 #222,

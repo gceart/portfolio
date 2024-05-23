@@ -45,7 +45,7 @@ export default function Projects () {
   )
 
   const remain = (
-    <section id='remain'> {elements.splice(3)} </section>
+    <section id='remain' className='gap-2'> {elements.splice(3)} </section>
   )
 
   const content = (
