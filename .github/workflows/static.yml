@@ -39,6 +39,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Create projects folder
+        run: mkdir -p dist/assets/projects
+      - name: Copy images
+        run: cp src/assets/projects/* dist/assets/projects/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
