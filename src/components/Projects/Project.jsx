@@ -1,6 +1,6 @@
 export default function Project (props) {
   const { name, description, link, repo, techs } = props.data
-  const image = `/src/assets/projects/${props.data.class}.png`
+  const image = `./assets/projects/${props.data.class}.png`
   const repoBrand = repo?.match(/(?<=https:\/\/)\w+/)[0]
   const technologies = techs?.map(t =>
     <i key={`${props.class}_${t}`} className={`fa-brands fa-${t} text-lg`} />
