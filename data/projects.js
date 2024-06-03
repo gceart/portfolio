@@ -8,6 +8,14 @@ export const projects = [
     repo: 'https://gitlab.com/gastonv/martinelli-soria-villalba-tp'
   },
   {
+    name: 'Kuasapp',
+    description: "Message viewer - Rebuild from WhatsApp database",
+    class: 'kuasapp',
+    link: 'https://kuasapp.onrender.com',
+    techs: ['sqlite', 'node', 'react'],
+    repo: 'https://kuasapp.onrender.com/info/kuasapp.html'
+  },
+  {
     name: 'Álbum Mundial 2022',
     description: 'FIFA 2022 World Cup Figurines Album Sales Simulator',
     class: 'album-mundial',

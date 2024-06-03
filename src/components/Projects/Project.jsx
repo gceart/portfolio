@@ -1,7 +1,9 @@
 export default function Project (props) {
   const { name, description, link, repo, techs } = props.data
   const image = `./assets/projects/${props.data.class}.png`
-  const repoBrand = repo?.match(/(?<=https:\/\/)\w+/)[0]
+  const repoName = repo?.match(/(?<=https:\/\/)\w+/)[0]
+  const repoCheck = ['gitlab', 'github'].includes(repoName)
+  const repoBrand =  repoCheck ? `fa-brands fa-${repoCheck}` : 'fa-solid fa-question'
   const technologies = techs?.map(t =>
     <i key={`${props.class}_${t}`} className={`fa-brands fa-${t} text-lg`} />
   )
@@ -15,7 +17,7 @@ export default function Project (props) {
         </header>
         <p className='row-start-2 text-lg text-gray-50'>{description}</p>
         <footer className='flex w-full h-full justify-evenly items-end py-4'>
-          <a title='Go to repository' className={`cursor-pointer hover:scale-125 fa-brands fa-${repoBrand} transition-all text-xl`} href={repo} />
+          <a title={`${repoCheck ? 'Go to repository' : 'Info'}`} className={`cursor-pointer hover:scale-125 ${repoBrand} transition-all text-xl`} href={repo} />
           {link && <a title='Go to website' className='fa-solid fa-globe text-xl hover:cursor-pointer hover:scale-125 transition-all' href={link} />}
         </footer>
       </div>
