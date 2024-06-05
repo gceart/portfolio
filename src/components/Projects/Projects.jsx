@@ -56,6 +56,6 @@ export default function Projects () {
   )
 
   return (
-    <Section title='Projects' subtitle={more} content={content} />
+    <Section title={`Projects (${projects.length})`} subtitle={more} content={content} />
   )
 }
