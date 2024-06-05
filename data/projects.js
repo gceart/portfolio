@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     name: 'Kuasapp',
-    description: "Message viewer - Rebuild from WhatsApp database",
+    description: "Message viewer - Rebuilt from WhatsApp database",
     class: 'kuasapp',
     link: 'https://kuasapp.onrender.com',
     techs: ['sqlite', 'node', 'react'],
