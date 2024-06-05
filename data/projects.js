@@ -1,11 +1,11 @@
 export const projects = [
   {
-    name: 'Supermielle',
-    description: "'Supermielle' Credit Card System. Made with PostgreSQL and a little demo of BoltDB",
-    class: 'supermielle',
+    name: 'Álbum Mundial 2022',
+    description: 'FIFA 2022 World Cup Figurines Album Sales Simulator',
+    class: 'album-mundial',
     link: '',
-    techs: ['postgresql', 'golang'],
-    repo: 'https://gitlab.com/gastonv/martinelli-soria-villalba-tp'
+    techs: ['java'],
+    repo: 'https://github.com/gaelceart/album-mundial'
   },
   {
     name: 'Kuasapp',
@@ -16,12 +16,20 @@ export const projects = [
     repo: 'https://kuasapp.onrender.com/info/kuasapp.html'
   },
   {
-    name: 'Álbum Mundial 2022',
-    description: 'FIFA 2022 World Cup Figurines Album Sales Simulator',
-    class: 'album-mundial',
+    name: 'Notes Challenge',
+    description: "Note app made in 3 days for interview challenge",
+    class: 'notes-challenge',
+    link: 'https://gaelceart.github.io/notes-challenge',
+    techs: ['node', 'react'],
+    repo: 'https://github.com/gaelceart/notes-challenge'
+  },
+  {
+    name: 'Supermielle',
+    description: "'Supermielle' Credit Card System. Made with PostgreSQL and a little demo of BoltDB",
+    class: 'supermielle',
     link: '',
-    techs: ['java'],
-    repo: 'https://github.com/gaelceart/album-mundial'
+    techs: ['postgresql', 'golang'],
+    repo: 'https://gitlab.com/gastonv/martinelli-soria-villalba-tp'
   },
   {
     name: 'w-UNGS-dle',

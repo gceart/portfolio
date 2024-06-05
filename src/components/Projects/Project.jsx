@@ -3,7 +3,7 @@ export default function Project (props) {
   const image = `./assets/projects/${props.data.class}.png`
   const repoName = repo?.match(/(?<=https:\/\/)\w+/)[0]
   const repoCheck = ['gitlab', 'github'].includes(repoName)
-  const repoBrand =  repoCheck ? `fa-brands fa-${repoCheck}` : 'fa-solid fa-question'
+  const repoBrand =  repoCheck ? `fa-brands fa-${repoName}` : 'fa-solid fa-question'
   const technologies = techs?.map(t =>
     <i key={`${props.class}_${t}`} className={`fa-brands fa-${t} text-lg`} />
   )
