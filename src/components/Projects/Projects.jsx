@@ -34,7 +34,12 @@ export default function Projects () {
     toggleAnimation()
   }
 
-  const more = <span className='material-symbols-outlined hover:scale-105 cursor-pointer flex ' onClick={() => handleShow()}>{arrow}</span>
+  const more = (
+    <div className='flex ml-2 justify-between items-center'>
+      <b>{`(${projects.length})`}</b>
+      <span className='material-symbols-outlined hover:scale-105 cursor-pointer flex ' onClick={() => handleShow()}>{arrow}</span>
+    </div>
+  )
 
   const mainProjects = (
     <>
@@ -56,6 +61,6 @@ export default function Projects () {
   )
 
   return (
-    <Section title={`Projects (${projects.length})`} subtitle={more} content={content} />
+    <Section title={"Projects"} subtitle={more} content={content} />
   )
 }
